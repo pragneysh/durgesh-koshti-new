@@ -20,6 +20,7 @@ export default function Navbar() {
 
         {/* Right Menu */}
         <div className="hidden md:flex items-center gap-8 text-gray-700 font-medium">
+          <Link to="/seminar" className="hover:text-[#5BA69A] transition duration-300">Seminar</Link>
           <Link to="/about" className="hover:text-[#5BA69A] transition duration-300">About</Link>
           <Link to="/blog" className="hover:text-[#5BA69A] transition duration-300">Blog</Link>
           <Link to="/contact" className="hover:text-[#5BA69A] transition duration-300">Contact</Link>

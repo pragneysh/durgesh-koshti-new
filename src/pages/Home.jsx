@@ -13,10 +13,10 @@ export default function Home() {
       <Hero />
       <MotivationGuide />
       {/* <Services /> */}
-      <Benefits />
+      {/* <Benefits /> */}
       <Programs />
       <Testimonials />
-      <YogaClasses />
+      {/* <YogaClasses /> */}
       <CTA />
     </>
   );
