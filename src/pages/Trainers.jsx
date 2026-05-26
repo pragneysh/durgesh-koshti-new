@@ -19,6 +19,8 @@ export default function Trainers() {
           students: row.Students,
           sessions: row.Sessions,
           insta_id: row.insta_id,
+          phone: row.Phone,
+          email: row.Email,
         }));
 
         setTrainers(rows);
@@ -63,25 +65,39 @@ export default function Trainers() {
               {/* Role */}
               <p className="text-gray-500 text-sm mt-1">{trainer.role}</p>
 
-              {/* Description */}
+              {/* Bio */}
               <p className="text-gray-600 text-sm mt-3 leading-relaxed line-clamp-4">
                 {trainer.bio}
               </p>
 
-              {/* Stats */}
-              {/* <div className="flex justify-center gap-8 mt-6 text-sm text-gray-600">
-                <div>
-                  <p className="font-semibold">{trainer.students}</p>
-                  <p>Students</p>
-                </div>
+              {/* Contact Info */}
+              <div className="mt-4 space-y-2 text-sm text-gray-600">
+                {trainer.phone && (
+                  <p>
+                    📞{" "}
+                    <a
+                      href={`tel:${trainer.phone}`}
+                      className="hover:text-[#5BA69A]"
+                    >
+                      {trainer.phone}
+                    </a>
+                  </p>
+                )}
 
-                <div>
-                  <p className="font-semibold">{trainer.sessions}</p>
-                  <p>Sessions</p>
-                </div>
-              </div> */}
+                {trainer.email && (
+                  <p>
+                    📧{" "}
+                    <a
+                      href={`mailto:${trainer.email}`}
+                      className="hover:text-[#5BA69A]"
+                    >
+                      {trainer.email}
+                    </a>
+                  </p>
+                )}
+              </div>
 
-              {/* Follow button only if insta_id exists */}
+              {/* Follow Button */}
               {trainer.insta_id && (
                 <a
                   href={`https://instagram.com/${trainer.insta_id}`}
