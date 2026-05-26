@@ -18,6 +18,7 @@ export default function Trainers() {
           image: row.Image,
           students: row.Students,
           sessions: row.Sessions,
+          insta_id: row.insta_id,
         }));
 
         setTrainers(rows);
