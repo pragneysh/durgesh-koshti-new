@@ -22,6 +22,7 @@ export default function Trainers() {
         }));
 
         setTrainers(rows);
+        console.log("rows ==> ", rows);
       });
   }, []);
 
