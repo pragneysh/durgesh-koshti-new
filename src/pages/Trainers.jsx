@@ -67,7 +67,7 @@ export default function Trainers() {
               </p>
 
               {/* Stats */}
-              <div className="flex justify-center gap-8 mt-6 text-sm text-gray-600">
+              {/* <div className="flex justify-center gap-8 mt-6 text-sm text-gray-600">
                 <div>
                   <p className="font-semibold">{trainer.students}</p>
                   <p>Students</p>
@@ -77,7 +77,7 @@ export default function Trainers() {
                   <p className="font-semibold">{trainer.sessions}</p>
                   <p>Sessions</p>
                 </div>
-              </div>
+              </div> */}
 
               {/* Follow button only if insta_id exists */}
               {trainer.insta_id && (
