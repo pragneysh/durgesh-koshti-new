@@ -19,6 +19,8 @@ export default function MotivationGuide() {
     FaBrain: <FaBrain size={30} />,
     FaHeartbeat: <FaHeartbeat size={30} />,
     FaSpa: <FaSpa size={30} />,
+    GiDistressSignal: <GiDistressSignal size={30} />,  
+    GiLifeBar: <GiLifeBar size={30} />,
   };
 
   useEffect(() => {
