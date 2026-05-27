@@ -44,11 +44,25 @@ export default function Trainers() {
             >
               {/* Image */}
               <div className="flex justify-center">
-                <img
-                  src={trainer.image}
-                  alt={trainer.name}
-                  className="w-40 h-40 object-cover rounded-3xl"
-                />
+                {trainer.image ? (
+                  <img
+                    src={trainer.image}
+                    alt={trainer.name}
+                    className="w-40 h-40 object-cover rounded-3xl"
+                    onError={(e) => {
+                      e.target.style.display = "none";
+                      e.target.nextSibling.style.display = "flex";
+                    }}
+                  />
+                ) : null}
+
+                <div
+                  className={`w-40 h-40 rounded-3xl bg-[#5BA69A] text-white text-6xl font-bold items-center justify-center ${
+                    trainer.image ? "hidden" : "flex"
+                  }`}
+                >
+                  {trainer.name?.charAt(0).toUpperCase()}
+                </div>
               </div>
 
               {/* Name */}
